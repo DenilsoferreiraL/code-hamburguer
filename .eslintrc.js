@@ -1,27 +1,26 @@
 module.exports = {
   env: {
     es2021: true,
-    node: true,
+    node: true
   },
-  extends: ['standard', 'prettier'],
+  extends: ['standard'],
   plugins: ['prettier'],
   overrides: [
     {
       env: {
-        node: true,
+        node: true
       },
       files: ['.eslintrc.{js,cjs}'],
       parserOptions: {
-        sourceType: 'script',
-      },
-    },
+        sourceType: 'script'
+      }
+    }
   ],
   parserOptions: {
-    ecmaVersion: 12,
-    sourceType: 'module',
+    ecmaVersion: 'latest',
+    sourceType: 'module'
   },
   rules: {
-    camelcase: 'off',
-    quotes: ['error', 'single','semi'],
-  },
-};
+    camelcase: 'off' // Desativa a regra de camelCase
+  }
+}
