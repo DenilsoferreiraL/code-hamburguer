@@ -6,40 +6,35 @@ module.exports = {
       id: {
         type: Sequelize.UUID,
         defaultValue: Sequelize.UUIDV4,
-        allowNUll: false,
+        allowNull: false, // Corrected spelling
         primaryKey: true
       },
       name: {
         type: Sequelize.STRING,
-        allowNUll: false
+        allowNull: false
       },
       email: {
         type: Sequelize.STRING,
-        allowNUll: false,
+        allowNull: false,
         unique: true
       },
-
       password_hash: {
         type: Sequelize.STRING,
-        allowNUll: false
+        allowNull: false
       },
-
       admin: {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
-        allowNUll: false
+        allowNull: false
       },
-
       created_at: {
         type: Sequelize.DATE,
-        allowNUll: false
+        allowNull: false
       },
-
       updated_at: {
         type: Sequelize.DATE,
-        allowNUll: false
+        allowNull: false
       }
-
     })
   },
 
