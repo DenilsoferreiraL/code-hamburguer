@@ -21,6 +21,6 @@ module.exports = {
     sourceType: 'module'
   },
   rules: {
-    camelcase: 'off' // Desativa a regra de camelCase
+    camelcase: 'off', // Desativa a regra de camelCase
   }
 }

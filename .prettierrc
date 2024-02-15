@@ -1,13 +1,13 @@
 {
-    "singleQuote": true,
-    "semi": false,
-    "trailingComma": "none",
-    "arrowParens": "avoid",
-    "bracketSpacing": true,
-    "useTabs": true,
-    "tabWidth": 1, 
-    "endOfLine": "auto",
-    "jsxSingleQuote": true,
-    "jsxBracketSameLine": true
+  "singleQuote": true,
+  "semi": false,
+  "trailingComma": "none",
+  "arrowParens": "avoid",
+  "bracketSpacing": true,
+  "useTabs": true,
+  "tabWidth": 2,
+  "endOfLine": "lf", 
+  "jsxSingleQuote": true,
+  "jsxBracketSameLine": true
   }
   
