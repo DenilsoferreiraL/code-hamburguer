@@ -1,5 +1,6 @@
 import * as Yup from 'yup'
 import Product from '../models/Product'
+
 class ProductController {
 	async store(request, response) {
 		const schema = Yup.object().shape({
@@ -27,9 +28,9 @@ class ProductController {
 		return response.json(product)
 	}
 
-	async index(reequest, response) {
+	async index(request, response) {
 		const products = await Product.findAll()
-		
+
 		return response.json(products)
 	}
 }
