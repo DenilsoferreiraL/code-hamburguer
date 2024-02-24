@@ -15,9 +15,20 @@ class CategoryController {
 
 		const { name } = request.body
 
-		const category = await Category.create({ name })
+		//Checks the category if it already exists in the database, if it does, it returns an error otherwise, it creates the category and returns its name and ID.
+		const categoryExist = await Category.findOne({
+			where: {
+				name
+			}
+		})
 
-		return response.json(category)
+		if (categoryExist) {
+			return response.status(400).json({ error: 'Category already created' })
+		}
+
+		const { id } = await Category.create({ name })
+
+		return response.json({ name, id })
 	}
 
 	async index(request, response) {
