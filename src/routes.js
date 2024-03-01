@@ -20,9 +20,11 @@ routes.use(authMiddleware)
 
 routes.post('/products', uploads.single('file'), ProductController.store)
 routes.get('/products', ProductController.index)
+routes.put('/products/:id', uploads.single('file'), ProductController.update)
 
-routes.post('/categories', CategoryController.store)
+routes.post('/categories', uploads.single('file'), CategoryController.store)
 routes.get('/categories', CategoryController.index)
+routes.put('/categories/:id', uploads.single('file'), CategoryController.update)
 
 routes.post('/orders', OrderController.store)
 routes.put('/orders/:id', OrderController.update)
