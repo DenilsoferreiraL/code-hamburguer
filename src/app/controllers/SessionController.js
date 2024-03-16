@@ -27,15 +27,16 @@ class SessionController {
 		if (!user || !(await user.checkPassword(password)))
 			incorrectUserEmailOrPassword()
 
-		return response.json({
-			id: user.id,
-			email,
-			name: user.name,
-			admin: user.admin,
-			token: jwt.sign({ id: user.id, name:user.name }, authConfig.secret, {
-				expiresIn: authConfig.expireIn
-			})
-		})
+			return response.json({
+				id: user.id,
+				email,
+				name: user.name,
+				admin: user.admin,
+				token: jwt.sign({ id: user.id, name: user.name }, authConfig.secret, {
+					expiresIn: authConfig.expireIn
+				})
+			});
+			
 	}
 }
 
