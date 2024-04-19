@@ -1,4 +1,3 @@
-import { timeStamp } from 'console'
 import mongoose from 'mongoose'
 
 const OrderSchema = new mongoose.Schema(
@@ -46,7 +45,6 @@ const OrderSchema = new mongoose.Schema(
 			required: true
 		}
 	},
-	{ timeStamp: true }
+	{ timestamps: true }
 )
-
 export default mongoose.model('Order', OrderSchema)

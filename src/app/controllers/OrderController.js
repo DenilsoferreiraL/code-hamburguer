@@ -60,8 +60,8 @@ class OrderController {
 				name: request.userName
 			},
 			products: editedProduct,
-			status: 'Pedido Realizado'
-		}
+			status: 'Pedido Realizado',
+		};
 		const orderResponse = await Order.create(order)
 
 		return response.status(201).json(orderResponse)
