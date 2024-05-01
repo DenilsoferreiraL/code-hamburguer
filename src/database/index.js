@@ -13,14 +13,14 @@ class Database {
 	}
 
 	init() {
-		this.connection = new Sequelize(configDataBase)
+		this.connection = new Sequelize('postgresql://postgres:bynqQRqojjMLVDiHMKFgXItIBwxpQxee@monorail.proxy.rlwy.net:59838/railway')
 		models
 			.map(model => model.init(this.connection))
 			.map(model => model.associate && model.associate(this.connection.models))
 	}
 	mongo() {
 		this.mongoConnection = mongoose.connect(
-			'mongodb://localhost:27017/codeburger'
+			'mongodb://mongo:vFIiIylsMWnOkMorJogBbGWXlNOhmYnL@monorail.proxy.rlwy.net:13473'
 		)
 	}
 }
