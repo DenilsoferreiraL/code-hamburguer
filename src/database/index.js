@@ -13,14 +13,14 @@ class Database {
 	}
 
 	init() {
-		this.connection = new Sequelize('postgresql://postgres:wcleIjvLhtcnpPSJsatrUvkDXcRisznb@monorail.proxy.rlwy.net:53205/railway')
+		this.connection = new Sequelize('postgresql://postgres:tkILuaCXjhpBiufnCXkukjFfBTyNNPWH@monorail.proxy.rlwy.net:39701/railway')
 		models
 			.map(model => model.init(this.connection))
 			.map(model => model.associate && model.associate(this.connection.models))
 	}
 	mongo() {
 		this.mongoConnection = mongoose.connect(
-			'mongodb://mongo:AMAerwiKuCBrpbpxMGBqmNJMSeDPfMtU@viaduct.proxy.rlwy.net:11639'
+			'mongodb://mongo:XMDKdhjWbVmXVjspMoxErIPmhvYRrnJz@roundhouse.proxy.rlwy.net:41243'
 		)
 	}
 }
