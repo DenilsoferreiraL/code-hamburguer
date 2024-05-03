@@ -5,7 +5,8 @@ import cors from 'cors';
 import './database';
 
 const corsOptions = {
-  origin: 'https://code-burger-react-azure.vercel.app/'
+  origin: 'https://code-burger-react-azure.vercel.app/',
+  credentials: true,
 }
 
 class App {
